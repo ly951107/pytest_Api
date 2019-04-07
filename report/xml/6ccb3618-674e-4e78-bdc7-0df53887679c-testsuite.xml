@@ -1,0 +1,162 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1554629697063" stop="1554629697525">
+  <name>testcase</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1554629697063" status="passed" stop="1554629697231">
+      <name>F:\ly\API\testcase\sys.test_login.TestLogin.test_login_success</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="登录成功"/>
+        <label name="feature" value="登录模块"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1428-MainThread"/>
+        <label name="host" value="LAPTOP-A2F5LSOT"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1554629697232" status="passed" stop="1554629697263">
+      <name>F:\ly\API\testcase\sys.test_login.TestLogin.test_login_fail_pws</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="登录失败——密码错误"/>
+        <label name="feature" value="登录模块"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1428-MainThread"/>
+        <label name="host" value="LAPTOP-A2F5LSOT"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1554629697263" status="passed" stop="1554629697283">
+      <name>F:\ly\API\testcase\sys.test_login.TestLogin.test_login_fail_name1</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="登录失败——用户名错误"/>
+        <label name="feature" value="登录模块"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1428-MainThread"/>
+        <label name="host" value="LAPTOP-A2F5LSOT"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1554629697284" status="passed" stop="1554629697317">
+      <name>F:\ly\API\testcase\sys.test_login.TestLogin.test_login_fail_name2</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="登录失败——用户名长度超出"/>
+        <label name="feature" value="登录模块"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1428-MainThread"/>
+        <label name="host" value="LAPTOP-A2F5LSOT"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1554629697319" status="passed" stop="1554629697356">
+      <name>F:\ly\API\testcase\sys.test_login.TestLogin.test_login_fail_name3</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="登录失败——用户名为空1"/>
+        <label name="feature" value="登录模块"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1428-MainThread"/>
+        <label name="host" value="LAPTOP-A2F5LSOT"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1554629697357" status="passed" stop="1554629697378">
+      <name>F:\ly\API\testcase\sys.test_login.TestLogin.test_login_fail_name4</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="登录失败——用户名为空2"/>
+        <label name="feature" value="登录模块"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1428-MainThread"/>
+        <label name="host" value="LAPTOP-A2F5LSOT"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1554629697380" status="passed" stop="1554629697413">
+      <name>F:\ly\API\testcase\sys.test_logout.TestLogout.test_logout</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="退出成功"/>
+        <label name="feature" value="退出模块"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1428-MainThread"/>
+        <label name="host" value="LAPTOP-A2F5LSOT"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1554629697415" status="failed" stop="1554629697525">
+      <name>F:\ly\API\testcase\user.test_saveOrUpdateUser.TestSaveOrUpdateUser.test_saveOrUpdateUser</name>
+      <failure>
+        <message>AssertionError: </message>
+        <stack-trace>self = &lt;testcase.user.test_saveOrUpdateUser.TestSaveOrUpdateUser object at 0x0000027725899470&gt;
+
+    @allure.story('注册用户成功')
+    @pytest.mark.debug
+    def test_saveOrUpdateUser(self):                          #注册用户成功
+        nickName=str(random.randint(10000000,11111111))
+        mobile="155"+nickName
+        data={"nickName":nickName,
+              "userName":mobile,
+              "telNo": "",
+              "email": "",
+              "address": "",
+              "roleIds": "1",
+              "regionId": 1,
+              "regionLevel": 1
+    
+              }
+&gt;       resp=http.post("/user/saveOrUpdateUser",data)
+
+testcase\user\test_saveOrUpdateUser.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;util.httpUtil.HttpUtil object at 0x00000277251F4FD0&gt;
+path = '/user/saveOrUpdateUser'
+data = {'address': '', 'email': '', 'nickName': '10335711', 'regionId': 1, ...}
+
+    def post(self,path,data):
+        proxies=CommonData.proxies   #获取全局变量
+        host=CommonData.host         #获取全局变量
+        data_json=json.dumps(data)     #将字典形式的data转换成json格式
+        if CommonData.token is not None:   #判断token是否为空，不为空则赋值，为空则不加
+            self.headers['token']=CommonData.token
+    
+        resp_login= self.http.post(url=host+path,
+                             proxies=proxies,
+                             headers=self.headers,
+                             data=data_json)
+&gt;       assert resp_login.status_code==200    #检验返回码是否为200
+E       AssertionError
+
+util\httpUtil.py:20: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="story" value="注册用户成功"/>
+        <label name="feature" value="新增用户"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1428-MainThread"/>
+        <label name="host" value="LAPTOP-A2F5LSOT"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
